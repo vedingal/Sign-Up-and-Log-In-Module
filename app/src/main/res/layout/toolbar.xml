@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sign Up"
+        android:id="@+id/textView"
+        android:textColor="#fff"
+        android:gravity="center|center_horizontal|left"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="3" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:id="@+id/btn_prev"
+        android:elegantTextHeight="false"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:text="PREV"
+        android:textColor="#fff"
+        android:enabled="true"
+        android:layout_weight="1"
+        android:layout_marginRight="16dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:id="@+id/btn_next"
+        android:elegantTextHeight="false"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:text="NEXT"
+        android:textColor="#fff"
+        android:enabled="true"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginRight="16dp" />
+
+</LinearLayout>
