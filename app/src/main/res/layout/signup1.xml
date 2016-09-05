@@ -7,94 +7,125 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="?attr/actionBarSize">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:id="@+id/imageView"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/avatar"
-        android:layout_margin="16dp"/>
+        android:layout_alignParentStart="true" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Full Name:"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true"
-        android:hint="Enter Full Name"
-        android:layout_marginTop="4dp" />
+            <ImageButton
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/btn_avatar"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/avatar"
+                android:layout_margin="16dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center_horizontal" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Gender:"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Full Name:"
+                android:id="@+id/textView2"
+                android:layout_below="@+id/btn_avatar"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp" />
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Male"
-        android:id="@+id/radioButton"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="16dp"
-        android:checked="false" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/et_fullName"
+                android:layout_below="@+id/textView2"
+                android:layout_alignParentStart="true"
+                android:hint="Enter Full Name"
+                android:layout_marginTop="4dp" />
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Female"
-        android:id="@+id/radioButton2"
-        android:layout_marginLeft="16dp"
-        android:checked="false"
-        android:layout_below="@+id/radioButton"
-        android:layout_alignParentStart="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Gender:"
+                android:id="@+id/textView3"
+                android:layout_below="@+id/et_fullName"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Birthday:"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/radioButton2"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp" />
+            <RadioGroup
+                android:id="@+id/radioGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3" >
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="4dp"
-        android:hint="Tap to Select Date"
-        android:editable="false" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:id="@+id/rb_male"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="16dp"
+                android:checked="false" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText3"
-        android:hint="Age"
-        android:editable="false"
-        android:layout_below="@+id/editText2"
-        android:layout_toEndOf="@+id/radioButton"
-        android:layout_alignParentStart="true" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:id="@+id/rb_female"
+                android:layout_marginLeft="16dp"
+                android:checked="false"
+                android:layout_below="@+id/rb_male"
+                android:layout_alignParentStart="true" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Birthday:"
+                android:id="@+id/textView4"
+                android:layout_below="@+id/radioGender"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_birthday"
+                android:layout_below="@+id/textView4"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="4dp"
+                android:hint="Tap to Select Date"
+                android:enabled="true"
+                android:focusable="true"
+                android:clickable="true"
+                android:editable="false" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_age"
+                android:hint="Age"
+                android:layout_below="@+id/et_birthday"
+                android:layout_alignParentStart="true"
+                android:editable="false"
+                android:enabled="true"
+                android:focusable="true"
+                android:clickable="true" />
+        </LinearLayout>
+    </ScrollView>
+
 </RelativeLayout>
