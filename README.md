@@ -19,6 +19,12 @@ Complete sign up and log in faeture that also displays registration fields once 
 * Unique Username Field
 * Password Field
 * Confirm Password Field
+* API was made based using [TutorialsPoint's Android - PHP/MySQL Tutorial](http://www.tutorialspoint.com/android/android_php_mysql.htm)
+
+## Notes:
+
+Do not forget to change values of FTP_HOST, FTP_USER, and FTP_PASS in SignUp.java
+Change server configuration in Config.java as well.
 
 
 
