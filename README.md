@@ -19,7 +19,7 @@ Complete sign up and log in faeture that also displays registration fields once 
 * Unique Username Field
 * Password Field
 * Confirm Password Field
-* API was made using [TutorialsPoint's Android - PHP/MySQL Tutorial](http://www.tutorialspoint.com/android/android_php_mysql.htm)
+* API was made using [simplifiedcoding.com's tutorial](https://www.simplifiedcoding.net/android-mysql-tutorial-to-perform-basic-crud-operation/)
 
 ## Notes:
 
